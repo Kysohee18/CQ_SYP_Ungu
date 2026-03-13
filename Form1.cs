@@ -102,7 +102,6 @@ namespace PraktikumADO4
             }
         }
         
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -112,6 +111,20 @@ namespace PraktikumADO4
         {
 
         }
-        
+        // tugas 1
+        private void btnHitungdsn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM Dosen";
+               
+            }
+            catch (Exception ex)
+            {
+               
+            }
+        }
     }
 }
