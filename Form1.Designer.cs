@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtHasil = new System.Windows.Forms.TextBox();
             this.btnHitungdsn = new System.Windows.Forms.Button();
+            this.btnUpdateMatkul = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -105,11 +106,21 @@
             this.btnHitungdsn.UseVisualStyleBackColor = true;
             this.btnHitungdsn.Click += new System.EventHandler(this.btnHitungdsn_Click_1);
             // 
+            // btnUpdateMatkul
+            // 
+            this.btnUpdateMatkul.Location = new System.Drawing.Point(229, 385);
+            this.btnUpdateMatkul.Name = "btnUpdateMatkul";
+            this.btnUpdateMatkul.Size = new System.Drawing.Size(103, 29);
+            this.btnUpdateMatkul.TabIndex = 10;
+            this.btnUpdateMatkul.Text = "Updatematkul";
+            this.btnUpdateMatkul.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 450);
+            this.Controls.Add(this.btnUpdateMatkul);
             this.Controls.Add(this.btnHitungdsn);
             this.Controls.Add(this.txtHasil);
             this.Controls.Add(this.label1);
@@ -134,6 +145,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHasil;
         private System.Windows.Forms.Button btnHitungdsn;
+        private System.Windows.Forms.Button btnUpdateMatkul;
     }
 }
 
