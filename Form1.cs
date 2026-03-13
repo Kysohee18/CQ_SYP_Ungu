@@ -44,7 +44,7 @@ namespace PraktikumADO4
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Koneksi Gagal" + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -62,7 +62,7 @@ namespace PraktikumADO4
                 conn.Close();
             }
             catch (Exception ex) {
-                //
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -80,13 +80,25 @@ namespace PraktikumADO4
                 conn.Close();
             }
             catch (Exception ex) { 
-            MessageBox.Show("Error: " + ex.Message);
+            MessageBox.Show(ex.Message);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "UPDATE Mahasiswa SET alamat='yogyakarta' WHERE nim='23110100001'";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("jumlah data yang terpengaruh: " + hasil);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
