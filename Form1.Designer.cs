@@ -36,7 +36,7 @@
             this.txtHasil = new System.Windows.Forms.TextBox();
             this.btnHitungdsn = new System.Windows.Forms.Button();
             this.btnUpdateMatkul = new System.Windows.Forms.Button();
-            this.InsertProdi = new System.Windows.Forms.Button();
+            this.btnInsertProdi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -117,22 +117,22 @@
             this.btnUpdateMatkul.UseVisualStyleBackColor = true;
             this.btnUpdateMatkul.Click += new System.EventHandler(this.btnUpdateMatkul_Click);
             // 
-            // InsertProdi
+            // btnInsertProdi
             // 
-            this.InsertProdi.Location = new System.Drawing.Point(351, 385);
-            this.InsertProdi.Name = "InsertProdi";
-            this.InsertProdi.Size = new System.Drawing.Size(103, 29);
-            this.InsertProdi.TabIndex = 11;
-            this.InsertProdi.Text = "TambahProdi";
-            this.InsertProdi.UseVisualStyleBackColor = true;
-            this.InsertProdi.Click += new System.EventHandler(this.button1_Click);
+            this.btnInsertProdi.Location = new System.Drawing.Point(351, 391);
+            this.btnInsertProdi.Name = "btnInsertProdi";
+            this.btnInsertProdi.Size = new System.Drawing.Size(110, 23);
+            this.btnInsertProdi.TabIndex = 11;
+            this.btnInsertProdi.Text = "insertprodi";
+            this.btnInsertProdi.UseVisualStyleBackColor = true;
+            this.btnInsertProdi.Click += new System.EventHandler(this.btnInsertProdi_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 450);
-            this.Controls.Add(this.InsertProdi);
+            this.Controls.Add(this.btnInsertProdi);
             this.Controls.Add(this.btnUpdateMatkul);
             this.Controls.Add(this.btnHitungdsn);
             this.Controls.Add(this.txtHasil);
@@ -159,7 +159,7 @@
         private System.Windows.Forms.TextBox txtHasil;
         private System.Windows.Forms.Button btnHitungdsn;
         private System.Windows.Forms.Button btnUpdateMatkul;
-        private System.Windows.Forms.Button InsertProdi;
+        private System.Windows.Forms.Button btnInsertProdi;
     }
 }
 

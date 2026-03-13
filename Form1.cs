@@ -8,21 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 
 namespace PraktikumADO4
 {
     public partial class Form1 : Form
-        
+
     {
         SqlConnection conn;
         SqlCommand cmd;
-    public Form1()
+        public Form1()
         {
             InitializeComponent();
         }
-        private void koneksi ()
+        private void koneksi()
         {
-            conn  = new SqlConnection (
+            conn = new SqlConnection(
                 "Data Source=DESKTOP-6V58GOQ\\PUTRASQL; Initial Catalog=DBAkademikADO; Integrated Security=True"
                 );
 
@@ -32,7 +33,7 @@ namespace PraktikumADO4
         {
 
         }
-        
+
         private void btnConnect_Click_1(object sender, EventArgs e)
         {
             try
@@ -56,8 +57,8 @@ namespace PraktikumADO4
                 conn.Open();
                 string query = "SELECT COUNT(*) FROM Mahasiswa";
 
-                cmd = new SqlCommand (query, conn);
-                int jumlah =(int)cmd.ExecuteScalar();
+                cmd = new SqlCommand(query, conn);
+                int jumlah = (int)cmd.ExecuteScalar();
                 txtHasil.Text = jumlah.ToString();
                 conn.Close();
             }
@@ -79,8 +80,8 @@ namespace PraktikumADO4
                 txtHasil.Text = jumlah.ToString();
                 conn.Close();
             }
-            catch (Exception ex) { 
-            MessageBox.Show(ex.Message);
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -101,7 +102,7 @@ namespace PraktikumADO4
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -126,7 +127,7 @@ namespace PraktikumADO4
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
         //soal 2
@@ -148,10 +149,24 @@ namespace PraktikumADO4
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInsertProdi_Click(object sender, EventArgs e)
         {
-
-        }
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika') ";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("jumlah data yang terpengaruh: " + hasil);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            } 
+        
+           
     }
 }
