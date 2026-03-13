@@ -129,14 +129,14 @@ namespace PraktikumADO4
                MessageBox.Show(ex.Message);
             }
         }
-
+        //soal 2
         private void btnUpdateMatkul_Click(object sender, EventArgs e)
         {
             try
             {
                 koneksi();
                 conn.Open();
-                string query = "UPDATE MataKuliah SET sks=4 WHERE kode_mk='IF210101'";
+                string query = "UPDATE MataKuliah SET sks=4 WHERE kodeMK='IF210101'";
                 cmd = new SqlCommand(query, conn);
                 int hasil = cmd.ExecuteNonQuery();
                 MessageBox.Show("jumlah data yang terpengaruh: " + hasil);
@@ -147,6 +147,11 @@ namespace PraktikumADO4
             {
                 MessageBox.Show(ex.Message);
             }
-        }   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
