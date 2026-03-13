@@ -35,11 +35,34 @@ namespace PraktikumADO4
         
         private void btnConnect_Click_1(object sender, EventArgs e)
         {
-            
+            try
+            {
+                koneksi();
+                conn.Open();
+                MessageBox.Show("Koneksi Berhasil");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Koneksi Gagal" + ex.Message);
+            }
         }
 
         private void btnHitungMhs_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM Mahasiswa";
+
+                cmd = new SqlCommand (query, conn);
+                int jumlah =(int)cmd.ExecuteScalar();
+                txtHasil.Text = jumlah.ToString();
+                conn.Close();
+            }
+            catch (Exception ex) {
+            }
 
         }
 
