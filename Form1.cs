@@ -62,13 +62,26 @@ namespace PraktikumADO4
                 conn.Close();
             }
             catch (Exception ex) {
+                //
             }
 
         }
 
         private void btnHitungMK_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM MataKuliah";
+                cmd = new SqlCommand(query, conn);
+                int jumlah = (int)cmd.ExecuteScalar();
+                txtHasil.Text = jumlah.ToString();
+                conn.Close();
+            }
+            catch (Exception ex) { 
+            MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
