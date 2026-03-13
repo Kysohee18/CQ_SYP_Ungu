@@ -34,6 +34,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtHasil = new System.Windows.Forms.TextBox();
+            this.btnHitungdsn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -94,11 +95,21 @@
             this.txtHasil.TabIndex = 8;
             this.txtHasil.TextChanged += new System.EventHandler(this.txtHasil_TextChanged);
             // 
+            // btnHitungdsn
+            // 
+            this.btnHitungdsn.Location = new System.Drawing.Point(108, 385);
+            this.btnHitungdsn.Name = "btnHitungdsn";
+            this.btnHitungdsn.Size = new System.Drawing.Size(103, 29);
+            this.btnHitungdsn.TabIndex = 9;
+            this.btnHitungdsn.Text = "HitungDosen";
+            this.btnHitungdsn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 450);
+            this.Controls.Add(this.btnHitungdsn);
             this.Controls.Add(this.txtHasil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdate);
@@ -121,6 +132,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHasil;
+        private System.Windows.Forms.Button btnHitungdsn;
     }
 }
 
