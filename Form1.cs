@@ -126,7 +126,7 @@ namespace PraktikumADO4
             }
             catch (Exception ex)
             {
-               
+               MessageBox.Show(ex.Message);
             }
         }
     }
