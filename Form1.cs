@@ -138,6 +138,8 @@ namespace PraktikumADO4
                 conn.Open();
                 string query = "UPDATE MataKuliah SET sks=4 WHERE kode_mk='IF210101'";
                 cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("jumlah data yang terpengaruh: " + hasil);
 
             }
         }
