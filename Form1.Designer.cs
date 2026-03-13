@@ -114,6 +114,7 @@
             this.btnUpdateMatkul.TabIndex = 10;
             this.btnUpdateMatkul.Text = "Updatematkul";
             this.btnUpdateMatkul.UseVisualStyleBackColor = true;
+            this.btnUpdateMatkul.Click += new System.EventHandler(this.btnUpdateMatkul_Click);
             // 
             // Form1
             // 

@@ -129,5 +129,16 @@ namespace PraktikumADO4
                MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnUpdateMatkul_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "UPDATE MataKuliah SET sks=4 WHERE kode_mk='IF210101'";
+
+            }
+        }
     }
 }
