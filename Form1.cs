@@ -94,6 +94,7 @@ namespace PraktikumADO4
                 cmd = new SqlCommand(query, conn);
                 int hasil = cmd.ExecuteNonQuery();
                 MessageBox.Show("jumlah data yang terpengaruh: " + hasil);
+                conn.Close();
             }
             catch (Exception ex)
             {
