@@ -12,10 +12,20 @@ using System.Data.SqlClient;
 namespace PraktikumADO4
 {
     public partial class Form1 : Form
+        
     {
-        public Form1()
+        SqlConnection conn;
+        SqlCommand cmd;
+    public Form1()
         {
             InitializeComponent();
+        }
+        private void koneksi ()
+        {
+            conn  = new SqlConnection (
+                "Data Source=DESKTOP-6V58GOQ\\PUTRASQL; Initial Catalog=DBAkademikADO; Integrated Security=True"
+                );
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,7 +35,7 @@ namespace PraktikumADO4
         
         private void btnConnect_Click_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnHitungMhs_Click_1(object sender, EventArgs e)
