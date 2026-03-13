@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PraktikumADO4
 {
@@ -18,6 +19,36 @@ namespace PraktikumADO4
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void btnConnect_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHitungMhs_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHitungMK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHasil_TextChanged(object sender, EventArgs e)
         {
 
         }
